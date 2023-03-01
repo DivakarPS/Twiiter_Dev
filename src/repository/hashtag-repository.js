@@ -7,7 +7,7 @@ class HashtagRepository {
             const tag = await Hashtag.create(data);
             return tag;
         } catch (error) {
-            console.log(error);
+            throw error;
         }
     }
 
@@ -16,7 +16,7 @@ class HashtagRepository {
             const tags = await Hashtag.insertMany(data);
             return tags;
         } catch (error) {
-            console.log(error);
+            throw error;
         }
     }
 
@@ -25,7 +25,7 @@ class HashtagRepository {
             const tag = await Hashtag.findById(id);
             return tag;
         } catch (error) {
-            console.log(error);
+            throw error;
         }
     }
 
@@ -34,7 +34,7 @@ class HashtagRepository {
             const response = await Hashtag.findByIdAndRemove(id);
             return response;
         } catch (error) {
-            console.log(error);
+            throw error;
         }
     }
     async findByName(titleList){
@@ -44,7 +44,7 @@ class HashtagRepository {
             });
             return tags;
         } catch (error) {
-            console.log(error);
+            throw error;
         }
     }
 

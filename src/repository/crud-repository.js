@@ -11,7 +11,7 @@ class CrudRepository {
             return response;
         } catch (error) {
             console.log('something went wrong in crud repo');
-            console.log(error);
+            throw error;
         }
     }
 
@@ -21,7 +21,7 @@ class CrudRepository {
             return response;
         } catch (error) {
             console.log('something went wrong in crud repo');
-            console.log(error);
+            throw error;
         }
     }
 
@@ -31,7 +31,7 @@ class CrudRepository {
             return response;
         } catch (error) {
             console.log('something went wrong in crud repo');
-            console.log(error);
+            throw error;
         }
     }
     async getAll(){
@@ -40,7 +40,7 @@ class CrudRepository {
             return response;
         } catch (error) {
             console.log('something went wrong in crud repo');
-            console.log(error);
+            throw error;
         }
     }
 
@@ -50,7 +50,7 @@ class CrudRepository {
             return result;
         } catch (error) {
             console.log('something went wrong in crud repo');
-            console.log(error);
+            throw error;
         }
     }
 }
