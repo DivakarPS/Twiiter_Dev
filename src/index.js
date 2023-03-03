@@ -3,6 +3,7 @@ import {connect} from './config/database.js';
 import bodyParser from 'body-parser';
 import apiRoutes from './routes/index.js';
 // import service from './services/tweet-service.js';
+import { toggleLike } from './controller/like-controller.js';
 
 import {UserRepository,  TweetRepository} from './repository/index.js';
 import LikeService from './services/like-service.js';
@@ -28,11 +29,12 @@ app.listen(3000, async () => {
     //     password : '123456',
     //     name: 'Divakar'
     // });
-    const tweetRepo = new TweetRepository();
-    const tweets = await tweetRepo.getAll(0,10);
-    const users = await userRepo.getAll();
-    // console.log(tweets , users);
-    const likeService = new LikeService();
-    await likeService.toggleike(tweets[0].id, 'Tweet', users[0].id);
+    // const tweetRepo = new TweetRepository();
+    // const tweets = await tweetRepo.getAll(0,10);
+    // const users = await userRepo.getAll();
+    // // console.log(tweets , users);
+    // const likeService = new LikeService();
+    // await likeService.toggleike(tweets[0].id, 'Tweet', users[0].id);
+    
 
 })

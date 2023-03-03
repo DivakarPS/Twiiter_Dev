@@ -11,7 +11,7 @@ class LikeService{
         if(modelName == 'Tweet'){
             var likable = await this.tweetRepository.find(modelId);
         } else if(modelName == 'Comment'){
-
+            //TODO
         }else{
             throw new Error('Unknown Model Type');
         }
