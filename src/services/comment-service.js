@@ -1,4 +1,3 @@
-import e from "express";
 import { CommentRepository, TweetRepository } from "../repository/index.js";
 
 class CommentService{
